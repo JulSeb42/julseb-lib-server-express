@@ -3,15 +3,16 @@ import logger from "morgan"
 import cookieParser from "cookie-parser"
 import cors from "cors"
 
+import { ORIGIN } from "../utils"
+
 const config = (app: any) => {
 	app.set("trust proxy", 1)
 
 	app.use(
 		cors({
 			credentials: true,
-			origin: "*",
-			allowedHeaders: "Access-Control-Allow-Origin",
-		})
+			origin: ORIGIN,
+		}),
 	)
 
 	app.use(logger("dev"))

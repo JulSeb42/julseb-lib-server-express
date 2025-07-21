@@ -1,3 +1,4 @@
+import "dotenv/config"
 import { expressjwt as jwt, type Request } from "express-jwt"
 
 const getTokenFromHeaders = (req: Request): string | undefined => {

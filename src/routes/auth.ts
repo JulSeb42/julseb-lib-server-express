@@ -1,7 +1,12 @@
 import { Router, type Request, type Response } from "express"
 import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
-import { passwordRegex, emailRegex, getRandomString } from "@julseb-lib/utils"
+import {
+	passwordRegex,
+	emailRegex,
+	getRandomString,
+	getRandomAvatar,
+} from "@julseb-lib/utils"
 import { UserModel } from "../models"
 import { isAuthenticated } from "../middleware"
 import { jwtConfig, SALT_ROUNDS, TOKEN_SECRET, sendMail } from "../utils"
@@ -57,6 +62,7 @@ router.post(PATHS.SIGNUP, async (req, res, next) => {
 				password: hashedPassword,
 				verified: false,
 				verifyToken,
+				avatar: getRandomAvatar(),
 			}).then(createdUser => {
 				sendMail(
 					email,
@@ -119,8 +125,8 @@ router.get(PATHS.LOGGED_IN, isAuthenticated, (req, res) => {
 	return res.status(200).json(payload)
 })
 
-router.put(PATHS.VERIFY(), async (req, res, next) => {
-	const { id, token } = req.params
+router.put(PATHS.VERIFY, async (req, res, next) => {
+	const { id, token } = req.body
 
 	await UserModel.findById(id).then(async foundUser => {
 		if (!foundUser) {

@@ -4,6 +4,7 @@ const SERVER_PATH_ROOTS = {
 	AUTH: "/auth",
 	UPLOADER: "/uploader",
 	USERS: "/users",
+	ADMIN: "/admin",
 	/* Prepend path root - DO NOT REMOVE */
 }
 
@@ -13,13 +14,7 @@ export const SERVER_PATHS = {
 		SIGNUP: "/signup",
 		LOGIN: "/login",
 		LOGGED_IN: "/loggedin",
-		VERIFY: (args = [":id", ":token"]) => {
-			const joinedArgs = args
-				.map(arg => (arg[0] === "/" ? arg.replace("/", "") : arg))
-				.join("/")
-
-			return `/verify/${joinedArgs}`
-		},
+		VERIFY: "/verify",
 		FORGOT_PASSWORD: "/forgot-password",
 		RESET_PASSWORD: "/reset-password",
 	},
@@ -34,6 +29,11 @@ export const SERVER_PATHS = {
 		EDIT_ACCOUNT: (id = ":id") => `/edit-account/${id}`,
 		EDIT_PASSWORD: (id = ":id") => `/edit-password/${id}`,
 		DELETE_ACCOUNT: (id = ":id") => `/delete-account/${id}`,
+	},
+	ADMIN: {
+		ROOT: SERVER_PATH_ROOTS.ADMIN,
+		RESET_PASSWORD: (id = ":id") => `/reset-password/${id}`,
+		DELETE_USER: (id = ":id") => `/delete-user/${id}`,
 	},
 	/* Prepend server path - DO NOT REMOVE */
 }
