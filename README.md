@@ -3,6 +3,7 @@
 This project is a boilerplate for building RESTful APIs using Express.js and TypeScript. It provides a clean structure, essential middleware, authentication, file uploading, and utility functions to help you get started quickly.
 
 ## Features
+
 - Express.js server setup
 - TypeScript support
 - JWT authentication middleware
@@ -14,10 +15,12 @@ This project is a boilerplate for building RESTful APIs using Express.js and Typ
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v18+ recommended)
 - pnpm (or npm/yarn)
 
 ### Installation
+
 1. Clone the repository:
    ```bash
    git clone <your-repo-url>
@@ -38,6 +41,7 @@ This project is a boilerplate for building RESTful APIs using Express.js and Typ
    ```
 
 ### Running the Server
+
 ```bash
 pnpm start
 # or
@@ -47,6 +51,7 @@ yarn start
 ```
 
 ### Development Mode
+
 ```bash
 pnpm dev
 # or
@@ -56,6 +61,7 @@ yarn dev
 ```
 
 ## Project Structure
+
 ```
 src/
   app.ts                # Express app setup
@@ -71,14 +77,18 @@ src/
 ```
 
 ## Scripts
+
 - `pnpm serve` — Run the server
 - `pnpm dev` — Run in development mode (with hot reload)
 
 ## Environment Variables
+
 See `template.env` for required variables (e.g., JWT secret, Cloudinary credentials).
 
 ## License
+
 MIT
 
 ## Author
-Julien Sebag
+
+[Julien Sebag](https://julien-sebag.com)
