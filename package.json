@@ -13,7 +13,6 @@
 	"keywords": [],
 	"author": "Julien Sebag",
 	"license": "MIT",
-	"packageManager": "pnpm@10.13.1",
 	"dependencies": {
 		"@julseb-lib/utils": "^0.0.16",
 		"bcryptjs": "^3.0.2",
