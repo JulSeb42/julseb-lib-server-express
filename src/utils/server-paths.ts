@@ -18,10 +18,6 @@ export const SERVER_PATHS = {
 		FORGOT_PASSWORD: "/forgot-password",
 		RESET_PASSWORD: "/reset-password",
 	},
-	UPLOADER: {
-		ROOT: SERVER_PATH_ROOTS.UPLOADER,
-		UPLOAD_PICTURE: "/upload-picture",
-	},
 	USERS: {
 		ROOT: SERVER_PATH_ROOTS.USERS,
 		ALL_USERS: "/all-users",
