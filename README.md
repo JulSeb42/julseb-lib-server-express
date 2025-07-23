@@ -11,6 +11,7 @@ This project is a boilerplate for building RESTful APIs using Express.js and Typ
 - Centralized error handling
 - Modular route and model structure
 - Utility functions for common tasks
+- Plop generators for scaffolding code
 
 ## Getting Started
 
@@ -76,10 +77,26 @@ src/
   utils/                # Utility functions
 ```
 
+
 ## Scripts
 
 - `pnpm serve` — Run the server
 - `pnpm dev` — Run in development mode (with hot reload)
+- `pnpm plop` — Run Plop generators for scaffolding (e.g., create new routes, models, etc.)
+
+## Plop Generators
+
+Plop is used to quickly scaffold new files (routes, models, etc.) with consistent structure.
+
+To use Plop:
+
+```bash
+pnpm plop
+# or
+npx plop
+```
+
+Follow the prompts to generate new code components.
 
 ## Environment Variables
 
