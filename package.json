@@ -16,7 +16,7 @@
 		"plop:r": "pnpm plop route"
 	},
 	"keywords": [],
-	"author": "Julien Sebag",
+	"author": "",
 	"license": "MIT",
 	"dependencies": {
 		"@julseb-lib/utils": "^0.0.16",
